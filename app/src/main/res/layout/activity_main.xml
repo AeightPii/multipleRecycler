@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <fragment
+            android:id="@+id/fragCamera"
+            android:name="com.example.btnrecycler.fragment.CameraFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/const_one"
+            android:layout_width="match_parent"
+            android:layout_height="65pt"
+            android:background="@drawable/brand"
+            android:orientation="vertical"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragCamera">
+
+            <TextView
+                android:id="@+id/txt_browse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="58dp"
+                android:layout_marginRight="65dp"
+                android:text="BROWSE"
+                android:textColor="#fff"
+                android:textSize="22sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_by_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="65dp"
+                android:background="@drawable/bg_orange"
+                android:text="By Brand"
+                android:textColor="#fff"
+                android:textSize="18sp"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_browse" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/txt_last_arrival"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Latest Arrival"
+            android:textColor="#676666"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/const_one" />
+
+        <TextView
+            android:id="@+id/txt_viewall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_orange"
+            android:text="View All"
+            android:textColor="#fff"
+            android:textSize="13sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/const_one" />
+
+        <fragment
+            android:id="@+id/fragLatest"
+            android:name="com.example.btnrecycler.fragment.LatestFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txt_last_arrival" />
+
+        <LinearLayout
+            android:id="@+id/linear_country"
+            android:layout_width="match_parent"
+            android:layout_height="65pt"
+            android:background="@drawable/brand1"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragLatest" />
+
+        <TextView
+            android:id="@+id/Country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Choose by Country"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_country" />
+
+        <fragment
+            android:id="@+id/fragCountry"
+            android:name="com.example.btnrecycler.fragment.CountryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/Country" />
+
+        <LinearLayout
+            android:id="@+id/linear_popular"
+            android:layout_width="match_parent"
+            android:layout_height="65pt"
+            android:background="@drawable/brand2"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragCountry" />
+
+        <TextView
+            android:id="@+id/pp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:text="Popular Products"
+            android:textSize="26sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear_popular" />
+
+        <fragment
+            android:id="@+id/fragPopular"
+            android:name="com.example.btnrecycler.fragment.PopularFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/p_new"
+            android:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/ppnew"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_blue"
+                android:gravity="center"
+                android:text="NEW"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/p_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@id/p_new"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/dis_value"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/bg_dis"
+                android:gravity="center"
+                android:text="30% off"
+                android:textColor="#fff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/p_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Iphone 8 plus"
+            android:textColor="#000"
+            android:textSize="22sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/p_new" />
+
+        <TextView
+            android:id="@+id/p_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Apple"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/p_name" />
+
+        <RatingBar
+            android:id="@+id/p_ratingbar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:isIndicator="false"
+            android:numStars="5"
+            android:rating="2"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/p_brand" />
+
+        <View
+            android:layout_width="210dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="7dp"
+            android:background="#9F9E9E"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/p_ratingbar" />
+
+        <TextView
+            android:id="@+id/p_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="780000Ks"
+            android:textColor="#F42323"
+            android:textSize="22sp"
+            android:visibility="visible"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/p_ratingbar" />
+
+        <LinearLayout
+            android:id="@+id/cross_dis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="17dp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layout_constraintLeft_toRightOf="@id/p_price"
+            app:layout_constraintTop_toBottomOf="@id/p_ratingbar">
+
+            <TextView
+                android:id="@+id/p_crossPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/st"
+                android:text="900000Ks"
+                android:textColor="#000"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/p_image"
+            android:layout_width="70pt"
+            android:layout_height="50pt"
+            android:scaleType="centerCrop"
+            android:src="@drawable/iphone"
+            android:layout_marginLeft="15dp"
+            app:layout_constraintLeft_toRightOf="@id/p_discount"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
